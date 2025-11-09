@@ -1,0 +1,16 @@
+Muchachos!!! este es el repositorio de GitHub, para poder subir cambios del proyecto de diseño de Mak-PC, andamos retrasado un poco, pero a darle
+vamos a usar html (Semantico), Css y JavaScript. Para ello, dejare estas reglas:
+
+-Estudien lo basico, si tienen conocimientos compartalos. Ayuden a mejorar el proyecto.
+-Pueden usar IA, pero no debemos depender, puntualmente con el HTML. En CSS podemos guiarnos con IA, por ser mas avanzado.
+-Algo que tambien les recomiendo, avisar si no van, incluso si fuese el caso al Sr Moises.
+-Desarrollaremos en pareja, por falta de maquinas.
+-Tengan cuidado, si los ven jugando o escuchando musica o simplemente no hacer nada, el sr Moises les puede llamar atencion.
+-Si estoy mal en algo, diganme para solucionar.
+-Con referente a las partes de cada uno, iremos viendo esta semana, para poder designarles una rama.
+
+Reglas tecnicas:
+
+-Usen terminos tecnicos, para que podamos entendernos y sepan sus significados.
+-Si crean un fichero nuevo, ya sea html o css detallen el nombre separado con un guion sus iniciales.
+-los ficheros index y style, seran los principales, no los toquen.
