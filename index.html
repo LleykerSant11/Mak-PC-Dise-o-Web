@@ -4,11 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Coolbox Clone</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
-    <link rel="stylesheet" href="MakPc_logo_n (1).png">
-
 </head>
 
 <body>
@@ -17,36 +15,49 @@
         <div class="navegacion-principal">
 
             <div class="logo">
-                <img src="MakPc_logo_n (1).png" alt="" width="50">
-                <h1>Mak-PC</h1>
+                <img src="/recursos/MakPc_logo_n (1).png" alt="" width="40">
+                <span class="logo-text">Mak PC</span>
             </div>
 
             <button class="btn-categorias">
-                <span class="icono-categoria"><i class="bi bi-grid-3x3-gap-fill"></i></span>
-                <span class="btn-text">Categorias</span>
+                <span class="icono-categoria"><i class="bi bi-list"></i></span>
+                <span class="btn-text">Categorías</span>
             </button>
 
-            <form action="formulario-busqueda">
-                <input type="search" class="entrada-busqueda" placeholder="¿Que buscas amigit@?">
-                <button type="submit" class="btn-busqueda"><i class="bi bi-search"></i></button>
+            <form class="formulario-busqueda">
+                <input type="search" class="entrada-busqueda" placeholder="¿Qué estás buscando?">
+                <button type="submit" class="btn-busqueda">
+                    <i class="bi bi-search"></i>
+                </button>
             </form>
 
             <nav>
-                <a href="#" class="navegacion">
+                <a href="#" class="navegacion usuario-link">
                     <span class="icono"><i class="bi bi-person-circle"></i></span>
-                    <span class="label">Inicia sesion</span>
+                    <span class="label">Hola,<br>Leyker</span>
                 </a>
 
-                <a href="#" class="navegacion">
-                    <span class="icono"><i class="bi bi-cart-dash"></i></span>
-                    <span class="label">carrito de compras</span>
+                <a href="#" class="navegacion compras-link">
+                    <span class="icono"><i class="bi bi-bag"></i></span>
+                    <span class="label">Mis<br>compras</span>
+                </a>
+
+                <a href="#" class="navegacion carrito-link">
+                    <span class="icono icono-grande"><i class="bi bi-cart"></i></span>
                 </a>
             </nav>
         </div>
 
-
+        <div class="barra-inferior">
         </div>
 
+        <div class="navegacion-secundaria">
+            <nav class="barra-navegacion-secundaria">
+                <a class="" href="">Ofertas</a>
+                <a class="" href="">Novedades</a>
+                <a class="" href="">Contacto</a>
+            </nav>
+        </div>
 
     </header>
 </body>
