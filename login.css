@@ -1,0 +1,19 @@
+body{
+    background-color: #f0f2f5;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        margin: 0;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.login-contenedor{
+    display: flex;
+    background-color: #00304E;
+    justify-content: center;
+    color: azure;
+
+}
+
