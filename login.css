@@ -1,19 +1,76 @@
-body{
-    background-color: #f0f2f5;
-
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        min-height: 100vh;
-        margin: 0;
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-
-.login-contenedor{
+body {
+    font-family: Arial, Helvetica, sans-serifzs;
+    background: color(srgb rgb(FFFFFF));
     display: flex;
-    background-color: #00304E;
     justify-content: center;
-    color: azure;
-
+    align-items: center;
+    height: 100vh;
+    margin: 0;
 }
 
+.login-container {
+    background-color: #00304E ;
+    padding: 40px;
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 15px #FFDB58;
+    width: 420px;
+    height: 700px;
+    text-align: center;
+}
+
+.LogoMak-PC {
+    position: absolute;
+        top: 120px;
+        left: 50%;
+        transform: translateX(-50%);
+        padding: 10px;
+        border-radius: 50%;
+}
+
+.login-container h1 {
+    color: #FFFFFF;
+    margin-bottom: 250px;
+    font-weight: 500; 
+}
+
+.login-form input {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 5px;
+    background-color: FFFFFF;
+    color: #000000;
+    font-size: 15px;
+}
+
+.visually-hidden{
+    color: #ffffff;
+}
+
+.login-form input::placeholder {
+    color: #020202;
+}
+
+.login-form button {
+    width: 100%;
+    padding: 12px;
+    background-color: #0655af;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background 0.3s;
+}
+
+.login-form button:hover {
+    background-color: #358bbd;
+}
+
+.error {
+    color: #ff6961;
+    margin-top: 10px;
+    font-size: 14px;
+}
