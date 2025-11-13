@@ -1,0 +1,101 @@
+/* --- Estilos generales --- */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: color(srgb rgb(FFFFFF));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+
+/* --- Contenedor principal --- */
+main.pagina.de.registro {
+    width: 100%;
+    max-width: 420px;
+    background: #00304E;
+    backdrop-filter: blur(10px);
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    padding: 2.5rem;
+    box-shadow: 0 0 15px #FFDB58;
+    width: 420px;
+    height: 900px;
+}
+
+/* --- Título --- */
+h1 {
+    text-align: center;
+    color: #ffffff;
+    margin-bottom: 1.5rem;
+    font-size: 1.8rem;
+}
+
+.LogoMak-PC {
+    top: 120px;
+    left: 50%;
+    transform: translateX(30%);
+    padding: 10px;
+    border-radius: 50%; 
+}
+
+/* --- Etiquetas e inputs --- */
+label {
+    display: block;
+    color: #ffffff;
+    font-weight: 600;
+    margin-top: 1rem;
+}
+
+input {
+    width: 100%;
+    padding: 10px 12px;
+    margin-top: 1.5rem;
+    border: 2px solid #dfe6e9;
+    border-radius: 6px;
+    outline: none;
+    transition: 0.3s;
+    font-size: 1rem;
+}
+
+input:focus {
+    border-color: #0984e3;
+    box-shadow: 0 0 6px rgba(9, 132, 227, 0.4);
+}
+
+/* --- Botón --- */
+button {
+    width: 100%;
+    padding: 12px;
+    background-color: #158ae4;
+    border: none;
+    border-radius: 6px;
+    color: white;
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin-top: 1.5rem;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+}
+
+button:hover {
+    background-color: #74b9ff;
+    transform: translateY(-2px);
+}
+
+button:active {
+    transform: scale(0.98);
+}
+
+/* --- Responsivo --- */
+@media (max-width: 480px) {
+    main.pagina.de.registro {
+        padding: 1.5rem;
+        margin: 0 1rem;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+}
