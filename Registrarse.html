@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrarase</title>
+    <link rel="stylesheet" href="Registrarse.css">
+</head>
+<body>
+    <main class="pagina de registro">
+        <form action="/registro" method="post">
+            <section class="registro">
+            <h1>Registrarase</h1>
+            <div class="LogoMak-PC"><img src="/recursos/MakPc_logo_n (1).png" alt="" width="150"></div>
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" required>
+
+                <label for="nombre">Apellido:</label>
+                <input type="text" id="nombre" name="nombre" required>
+        
+                <label for="email">Correo electrónico:</label>
+                <input type="email" id="email" name="email" required>
+        
+                <label for="password">Contraseña:</label>
+                <input type="password" id="password" name="password" required>
+                <button type="button" class="toggle-btn" onclick="togglePassword()">👁️</button>
+        
+                <label for="confirmar">Confirmar contraseña:</label>
+                <input type="password" id="confirmar" name="confirmar" required>
+            <button type="submit">Registrarme</button>
+        </form>
+        </section>
+    </main>
+</body>
+</html>
