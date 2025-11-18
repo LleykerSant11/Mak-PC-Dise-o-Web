@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registrarase</title>
     <link rel="stylesheet" href="Registrarse.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
 </head>
 <body>
     <main class="pagina de registro">
@@ -22,11 +23,16 @@
                 <input type="email" id="email" name="email" required>
         
                 <label for="password">Contraseña:</label>
-                <input type="password" id="password" name="password" required>
-                <button type="button" class="toggle-btn" onclick="togglePassword()">👁️</button>
-        
-                <label for="confirmar">Confirmar contraseña:</label>
-                <input type="password" id="confirmar" name="confirmar" required>
+                
+                <div> 
+                    <i class="bi bi-eye-fill" onclick="togglePasswordVisibility()"></i>
+                    <input type="password" id="password" name="password" required>
+
+                    <label for="confirmar">Confirmar contraseña:</label>
+                    <i class="bi bi-eye-fill" onclick="togglePasswordVisibility()"></i>
+                    <input type="password" id="confirmar" name="confirmar" required>
+                </div>
+                
             <button type="submit">Registrarme</button>
         </form>
         </section>
