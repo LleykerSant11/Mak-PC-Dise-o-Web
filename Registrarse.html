@@ -1,41 +1,74 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Registrarase</title>
+    <title>Registrarse</title>
     <link rel="stylesheet" href="Registrarse.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
 </head>
+
 <body>
-    <main class="pagina de registro">
-        <form action="/registro" method="post">
-            <section class="registro">
-            <h1>Registrarase</h1>
-            <div class="LogoMak-PC"><img src="/recursos/MakPc_logo_n (1).png" alt="" width="150"></div>
-                <label for="nombre">Nombre:</label>
-                <input type="text" id="nombre" name="nombre" required>
+    <main class="auth-container">
 
-                <label for="nombre">Apellido:</label>
-                <input type="text" id="nombre" name="nombre" required>
-        
-                <label for="email">Correo electrónico:</label>
-                <input type="email" id="email" name="email" required>
-        
-                <label for="password">Contraseña:</label>
-                
-                <div> 
-                    <i class="bi bi-eye-fill" onclick="togglePasswordVisibility()"></i>
-                    <input type="password" id="password" name="password" required>
+        <section class="register-card">
 
-                    <label for="confirmar">Confirmar contraseña:</label>
-                    <i class="bi bi-eye-fill" onclick="togglePasswordVisibility()"></i>
-                    <input type="password" id="confirmar" name="confirmar" required>
+            <div class="logo">
+                <img src="/recursos/MakPc_logo_n (1).png" alt="MakPC Logo">
+            </div>
+
+            <header class="register-header">
+                <h1>Crea tu cuenta</h1>
+                <p>Únete y disfruta de tu experiencia</p>
+            </header>
+
+            <form action="/registro" method="POST" class="form">
+
+                <div class="field">
+                    <label for="nombre">Nombre</label>
+                    <input type="text" id="nombre" name="nombre" required>
                 </div>
-                
-            <button type="submit">Registrarme</button>
-        </form>
+
+                <div class="field">
+                    <label for="apellido">Apellido</label>
+                    <input type="text" id="apellido" name="apellido" required>
+                </div>
+
+                <div class="field">
+                    <label for="email">Correo electrónico</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+
+                <div class="field password-wrapper">
+                    <label for="password">Contraseña</label>
+                    <input type="password" id="password" name="password" required>
+                    <i class="bi bi-eye-fill toggle-pass" onclick="togglePass('password')"></i>
+                </div>
+
+                <div class="field password-wrapper">
+                    <label for="confirmar">Confirmar contraseña</label>
+                    <input type="password" id="confirmar" name="confirmar" required>
+                    <i class="bi bi-eye-fill toggle-pass" onclick="togglePass('confirmar')"></i>
+                </div>
+
+                <button type="submit" class="btn-submit">Registrarme</button>
+
+                <p class="login-text">
+                    ¿Ya tienes cuenta? <a href="login.html">Inicia sesión</a>
+                </p>
+
+            </form>
         </section>
     </main>
+
+    <script>
+        function togglePass(id) {
+            const field = document.getElementById(id);
+            field.type = field.type === "password" ? "text" : "password";
+        }
+    </script>
+
 </body>
+
 </html>

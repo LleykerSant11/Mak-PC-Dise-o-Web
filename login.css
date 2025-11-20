@@ -1,91 +1,223 @@
+/* ---------------------------- */
+/*      ESTILO GENERAL          */
+/* ---------------------------- */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif;
+}
+
 body {
-    font-family: Arial, Helvetica, sans-serifzs;
-    background: color(srgb rgb(FFFFFF));
+    background: linear-gradient(135deg, #00304E, #00304ecb);
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    margin: 0;
 }
 
-.login-container {
-    background-color: #00304E ;
-    padding: 40px;
-    border-radius: 10px;
-    backdrop-filter: blur(10px);
-    box-shadow: 0 0 15px #FFDB58;
-    width: 420px;
-    height: 700px;
+/* ---------------------------- */
+/*      TARJETA DE LOGIN        */
+/* ---------------------------- */
+
+.login-card {
+    background: #ffffff;
+    width: 380px;
+    padding: 40px 35px;
+    border-radius: 15px;
     text-align: center;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.20);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 }
 
-.LogoMak-PC {
-    position: absolute;
-        top: 120px;
-        left: 50%;
-        transform: translateX(-50%);
-        padding: 10px;
-        border-radius: 50%;
+.login-logo img {
+    width: 140px;
+    margin: 0 auto;
 }
 
-.login-container h1 {
-    color: #ffffff;
-    margin-bottom: 250px;
-    font-weight: 500; 
-}
+/* ---------------------------- */
+/*        TÍTULOS               */
+/* ---------------------------- */
 
-.login-form input {
-    width: 100%;
-    padding: 12px;
-    margin: 10px 0;
-    border: none;
-    border-radius: 5px;
-    background-color: FFFFFF;
-    color: #000000;
-    font-size: 15px;
-    
-}
-
-.visually-hidden{
-    color: #ffffff;
-    float: left;
+.login-header h1 {
+    font-size: 1.7rem;
+    margin-bottom: 5px;
     font-weight: 700;
 }
 
-.login-form input::placeholder {
-    color: #020202;
+.login-header p {
+    font-size: .95rem;
+    color: #666;
 }
 
-.login-form button {
+/* ---------------------------- */
+/*         CAMPOS               */
+/* ---------------------------- */
+
+.field input {
     width: 100%;
+    padding: 14px 14px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    font-size: .95rem;
+    outline: none;
+    transition: 0.2s;
+}
+
+.field input:focus {
+    border-color: #00304e71;
+}
+
+.password-wrapper {
+    position: relative;
+}
+
+.toggle-pass {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: #777;
+    font-size: 1.2rem;
+}
+
+/* ---------------------------- */
+/*      OPCIONES BAJO CAMPOS    */
+/* ---------------------------- */
+
+.options-row {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.remember {
+    font-size: .85rem;
+    color: #444;
+}
+
+.forgot {
+    font-size: .85rem;
+    text-decoration: none;
+    color: #00304E;
+}
+
+.forgot:hover {
+    text-decoration: underline;
+}
+
+/* ---------------------------- */
+/*       BOTÓN PRINCIPAL        */
+/* ---------------------------- */
+
+.btn-submit {
+    width: 100%;
+    background: #00304E;
+    border: none;
+    padding: 13px;
+    border-radius: 30px;
+    font-size: 1rem;
+    color: #fff;
+    cursor: pointer;
+    font-weight: 600;
+    transition: .2s;
+    margin-top: 20px;
+}
+
+.btn-submit:hover {
+    background: #005082;
+}
+
+/* ---------------------------- */
+/*        DIVIDER "O"           */
+/* ---------------------------- */
+
+.divider {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 5px 0;
+}
+
+.divider::before,
+.divider::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background: #ddd;
+}
+
+.divider span {
+    color: #777;
+}
+
+/* ---------------------------- */
+/*   BOTONES SOCIALES           */
+/* ---------------------------- */
+
+.btn-social {
+    width: 100%;
+    border-radius: 50px;
     padding: 12px;
-    background-color: #0655af;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    justify-content: center;
+    font-weight: 600;
+    border: 1px solid #ddd;
+    background: #fff;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.btn-social:hover {
+    background: #f1f1f1;
+}
+
+.btn-social img {
+    width: 22px;
+}
+
+.facebook {
+    background: #3b5998;
     color: white;
     border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 18px;
-    transition: background 0.3s;
 }
 
-.login-form button:hover {
-    background-color: #358bbd;
+.facebook:hover {
+    background: #53b05b;
 }
 
-.error {
-    color: #ff6961;
-    margin-top: 10px;
-    font-size: 14px;
+.facebook i {
+    font-size: 1.3rem;
 }
 
-.bi {
-    color: #9b9797;
-    font-size: 25px;
+/* ---------------------------- */
+/*   TEXTO FINAL DE REGISTRO    */
+/* ---------------------------- */
+
+.signup-text {
+    font-size: .9rem;
+    margin-top: 5px;
+    color: #555;
+}
+
+.signup-text a {
+    color: #00304E;
+    text-decoration: none;
+}
+
+.signup-text a:hover {
+    text-decoration: underline;
+}
+
+/* Ocultar visualmente pero accesible */
+.visually-hidden {
     position: absolute;
-    display: block;
-    right: 30px;
-    top: 63%;
-    transform: translateY(-100%);
-    cursor: pointer;
-    font-size: 23px;
+    left: -9999px;
 }
