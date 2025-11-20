@@ -1,113 +1,145 @@
-/* --- Estilos generales --- */
+/* ---------------------------- */
+/*        FONDO DIFUMINADO      */
+/* ---------------------------- */
+
 body {
-    font-family: 'Poppins', sans-serif;
-    background: color(srgb rgb(FFFFFF));
+    margin: 0;
+    font-family: "Inter", sans-serif;
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    margin: 0;
+
+    background: linear-gradient(135deg, #00304E, #00304ecb);
+    backdrop-filter: blur(12px);
 }
 
+/* ---------------------------- */
+/*        CONTENEDOR CARD       */
+/* ---------------------------- */
 
-/* --- Contenedor principal --- */
-main.pagina.de.registro {
+.auth-container {
     width: 100%;
-    max-width: 420px;
-    background: #00304E;
-    backdrop-filter: blur(10px);
-    border-radius: 12px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-    padding: 2.5rem;
-    box-shadow: 0 0 15px #FFDB58;
-    width: 420px;
-    height: 900px;
+    display: flex;
+    justify-content: center;
 }
 
-/* --- Título --- */
-h1 {
+.register-card {
+    background: #ffffff;
+    width: 380px;
+    padding: 40px 35px;
+    border-radius: 18px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.20);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
     text-align: center;
-    color: #ffffff;
-    margin-bottom: 1.5rem;
+}
+
+/* ---------------------------- */
+/*            LOGO              */
+/* ---------------------------- */
+
+.logo img {
+    width: 120px;
+    margin: 0 auto;
+}
+
+/* ---------------------------- */
+/*           TÍTULOS            */
+/* ---------------------------- */
+
+.register-header h1 {
     font-size: 1.8rem;
+    font-weight: 700;
 }
 
-.LogoMak-PC {
-    top: 120px;
-    left: 50%;
-    transform: translateX(30%);
-    padding: 10px;
-    border-radius: 50%; 
+.register-header p {
+    color: #666;
+    margin-top: -5px;
+    font-size: .95rem;
 }
 
-/* --- Etiquetas e inputs --- */
+/* ---------------------------- */
+/*         CAMPOS INPUT         */
+/* ---------------------------- */
+
+.field {
+    text-align: left;
+}
+
 label {
-    display: block;
-    color: #ffffff;
+    font-size: .9rem;
     font-weight: 600;
-    margin-top: 1rem;
+    color: #333;
 }
 
 input {
     width: 100%;
-    padding: 10px 12px;
-    margin-top: 1.5rem;
-    border: 2px solid #dfe6e9;
-    border-radius: 6px;
+    padding: 12px;
+    margin-top: 5px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    font-size: .95rem;
     outline: none;
-    transition: 0.3s;
-    font-size: 1rem;
+    transition: .2s;
 }
 
 input:focus {
-    border-color: #0984e3;
-    box-shadow: 0 0 6px rgba(9, 132, 227, 0.4);
+    border-color: #00304e71;
 }
 
-/* --- Botón --- */
-button {
-    width: 100%;
-    padding: 12px;
-    background-color: #158ae4;
-    border: none;
-    border-radius: 6px;
-    color: white;
-    font-size: 1.1rem;
-    font-weight: bold;
-    margin-top: 1.5rem;
-    cursor: pointer;
-    transition: background 0.3s, transform 0.2s;
+/* Icono del ojo */
+.password-wrapper {
+    position: relative;
 }
 
-button:hover {
-    background-color: #74b9ff;
-    transform: translateY(-2px);
-}
-
-button:active {
-    transform: scale(0.98);
-}
-
-/* --- Responsivo --- */
-@media (max-width: 480px) {
-    main.pagina.de.registro {
-        padding: 1.5rem;
-        margin: 0 1rem;
-    }
-    h1 {
-        font-size: 1.5rem;
-    }
-}
-
-.bi {
-    color: #9b9797;
-    font-size: 25px;
+.toggle-pass {
     position: absolute;
-    display: block;
-    right: 30px;
-    top: 70%;
-    transform: translateY(-100%);
+    right: 12px;
+    top: 38px;
+    font-size: 1.2rem;
+    color: #777;
     cursor: pointer;
-    font-size: 23px;
 }
 
+/* ---------------------------- */
+/*        BOTÓN REGISTRO        */
+/* ---------------------------- */
+
+.btn-submit {
+    background: #00304E;
+    color: #fff;
+    padding: 13px;
+    width: 100%;
+    border: none;
+    border-radius: 30px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: .2s;
+    margin-top: 10px;
+}
+
+.btn-submit:hover {
+    background: #005082;
+}
+
+/* ---------------------------- */
+/*     TEXTO FINAL LOGIN        */
+/* ---------------------------- */
+
+.login-text {
+    font-size: .9rem;
+    margin-top: 5px;
+    color: #555;
+}
+
+.login-text a {
+    color: #00304E;
+    text-decoration: none;
+}
+
+.login-text a:hover {
+    text-decoration: underline;
+}

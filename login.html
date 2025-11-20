@@ -4,30 +4,75 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pantalla de Login</title>
+    <title>Login</title>
     <link rel="stylesheet" href="login.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
 </head>
 
 <body>
-    <main class="login-page">
-        <section class="login-container">
+<main class="login-page">
+    <section class="login-card">
+
+        <figure class="login-logo">
+            <img src="/recursos/MakPc_logo_n (1).png" alt="Logo MakPC">
+        </figure>
+
+        <header class="login-header">
             <h1>Iniciar Sesión</h1>
-            <div class="LogoMak-PC"><img src="/recursos/MakPc_logo_n (1).png" alt="" width="200"></div>
-            <form id="loginForm" class="login-form">
-                <label for="username" class="visually-hidden" >Usuario</label>
-                <input type="text" id="username" name="username" placeholder="Usuario" required>
-                <br>
+            <p>Continúa con tu cuenta</p>
+        </header>
+
+        <form id="loginForm">
+
+            <div class="field">
+                <label for="username" class="visually-hidden">Usuario</label>
+                <input type="text" id="username" name="username" placeholder="Correo o usuario" required>
+            </div>
+
+            <div class="field password-wrapper">
                 <label for="password" class="visually-hidden">Contraseña</label>
                 <input type="password" id="password" name="password" placeholder="Contraseña" required>
-                <i class="bi bi-eye-fill" onclick="togglePasswordVisibility()"></i>
-                <br>
-                <button type="submit">Ingresar</button>
-                <p id="errorMsg" class="error"></p>
-                <p><a href="Registrarse.html" class="visually-hidden">Registrarase</a></p>
-            </form>
-        </section>
-    </main>
+                <i class="bi bi-eye-fill toggle-pass" onclick="togglePasswordVisibility()"></i>
+            </div>
+
+            <div class="options-row">
+                <label class="remember">
+                    <input type="checkbox"> Recuérdame
+                </label>
+                <a href="#" class="forgot">¿Olvidaste tu contraseña?</a>
+            </div>
+
+            <button type="submit" class="btn-submit">Ingresar</button>
+
+            <p id="errorMsg" class="error"></p>
+
+            <div class="divider"><span>o</span></div>
+
+            <button type="button" class="btn-social google">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/google/google-original.svg" alt="Google">
+                Continuar con Google
+            </button>
+
+            <button type="button" class="btn-social facebook">
+                <i class="bi bi-facebook"></i>
+                Continuar con Apple
+            </button>
+
+            <p class="signup-text">
+                ¿Aún no tienes cuenta?
+                <a href="Registrarse.html">Regístrate gratis</a>
+            </p>
+        </form>
+    </section>
+</main>
+
+    <script>
+        function togglePasswordVisibility() {
+            const input = document.getElementById("password");
+            input.type = input.type === "password" ? "text" : "password";
+        }
+    </script>
+
 </body>
 
 </html>
