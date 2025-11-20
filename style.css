@@ -162,7 +162,7 @@ nav {
     transition: color 0.2s;
 }
 
-/* ===== Barra lateral de categorías ===== */
+
 .barra-categorias {
     position: fixed;       
     top: 0;
@@ -177,7 +177,7 @@ nav {
     z-index: 1000;         
 }
 
-/* Oculta la barra desplazándola hacia la izquierda */
+
 .barra-categorias.oculto {
     transform: translateX(-100%);
 }
