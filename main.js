@@ -1,39 +1,46 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const btnCategorias = document.getElementById("btnCategorias");
-    const barraCategorias = document.getElementById("barraCategorias");
-    const btnCerrar = document.getElementById("btnCerrarSidebar");
-    const overlay = document.getElementById("overlay");
+    // Seleccionamos los elementos
+    const botonesNav = document.querySelectorAll('.btn-nav');
+    const paneles = document.querySelectorAll('.panel-info');
+    const overlay = document.getElementById('overlay');
 
-    // Función para abrir/cerrar
-    function toggleMenu() {
-        barraCategorias.classList.toggle("oculto");
-        overlay.classList.toggle("oculto");
-        
-        // Actualizar aria-expanded para accesibilidad
-        const estaOculto = barraCategorias.classList.contains("oculto");
-        btnCategorias.setAttribute("aria-expanded", !estaOculto);
+    // Función para cerrar todo
+    function cerrarTodo() {
+        paneles.forEach(panel => panel.classList.remove('mostrar'));
+        botonesNav.forEach(btn => btn.classList.remove('activo'));
+        overlay.classList.add('oculto');
     }
 
-    // Evento click en el botón de categorías
-    btnCategorias.addEventListener("click", (e) => {
-        e.stopPropagation(); // Evita que el click cierre el menú inmediatamente
-        toggleMenu();
+    // Evento click para cada botón del menú
+    botonesNav.forEach(boton => {
+        boton.addEventListener('click', (e) => {
+            const targetId = boton.getAttribute('data-target');
+            const panelTarget = document.getElementById(targetId);
+            
+            // Si el botón ya estaba activo, cerramos todo (toggle off)
+            if (boton.classList.contains('activo')) {
+                cerrarTodo();
+            } else {
+                // 1. Cerramos cualquier otro panel abierto primero
+                cerrarTodo(); 
+                
+                // 2. Activamos el actual
+                boton.classList.add('activo');
+                if (panelTarget) {
+                    panelTarget.classList.add('mostrar');
+                    overlay.classList.remove('oculto');
+                }
+            }
+        });
     });
 
-    // Evento cerrar con la X
-    if(btnCerrar) {
-        btnCerrar.addEventListener("click", toggleMenu);
-    }
+    // Cerrar si se hace click en el overlay (fuera del menú)
+    overlay.addEventListener('click', cerrarTodo);
 
-    // Evento cerrar clickeando el fondo oscuro (Overlay)
-    if(overlay) {
-        overlay.addEventListener("click", toggleMenu);
-    }
-    
-    // (Opcional) Cerrar con tecla ESC
+    // Cerrar si se presiona la tecla ESC
     document.addEventListener('keydown', (e) => {
-        if (e.key === "Escape" && !barraCategorias.classList.contains("oculto")) {
-            toggleMenu();
+        if (e.key === 'Escape') {
+            cerrarTodo();
         }
     });
 });

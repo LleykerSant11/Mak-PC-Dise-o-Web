@@ -11,7 +11,6 @@
 
 <body>
     <header class="contenedor-principal">
-
         <div class="navegacion-principal">
             <div class="logo">
                 <img src="/recursos/MakPc_logo_n (1).png" alt="Logo" width="40">
@@ -42,42 +41,74 @@
         </div>
 
         <div class="contenedor-inferior">
-            <button class="btn-categorias" id="btnCategorias">
-                <i class="bi bi-list"></i>
-                <span>Categorías</span>
-            </button>
-
-            <nav class="navegacion-secundaria">
-                <a href="#">Ofertas</a>
-                <a href="#">Novedades</a>
-                <a href="#">Contacto</a>
+            <nav class="menu-categorias">
+                <button class="btn-nav" data-target="panel-computadoras">Computadoras <i
+                        class="bi bi-chevron-down"></i></button>
+                <button class="btn-nav" data-target="panel-laptops">Laptops <i class="bi bi-chevron-down"></i></button>
+                <button class="btn-nav" data-target="panel-impresoras">Impresoras <i
+                        class="bi bi-chevron-down"></i></button>
+                <button class="btn-nav" data-target="panel-accesorios">Accesorios <i
+                        class="bi bi-chevron-down"></i></button>
             </nav>
-
-            <div style="width: 120px;"></div>
         </div>
 
+        <div class="contenedor-paneles">
+
+            <div id="panel-computadoras" class="panel-info">
+                <h3>Computadoras de Escritorio</h3>
+                <p>Encuentra las mejores PC Gamer, de oficina y Workstations.</p>
+                <ul>
+                    <li><a href="#">PC Gamer Intel</a></li>
+                    <li><a href="#">PC Gamer AMD</a></li>
+                    <li><a href="#">All in One</a></li>
+                </ul>
+            </div>
+
+            <div id="panel-laptops" class="panel-info">
+                <h3>Laptops y Portátiles</h3>
+                <p>Laptops ultraligeras, gaming y para estudiantes.</p>
+                <div class="grid-ejemplo">
+                    <a href="#">MacBook</a>
+                    <a href="#">Asus ROG</a>
+                    <a href="#">Lenovo Thinkpad</a>
+                </div>
+            </div>
+
+            <div id="panel-impresoras" class="panel-info">
+                <h3>Impresión y Escaner</h3>
+                <p>Soluciones de tinta continua, láser y multifuncionales.</p>
+            </div>
+
+            <div id="panel-accesorios" class="panel-info">
+                <h3>Accesorios y Periféricos</h3>
+                <p>Teclados, mouse, auriculares y monitores.</p>
+            </div>
+        </div>
     </header>
-
-    <aside id="barraCategorias" class="barra-categorias oculto">
-        <div class="sidebar-header">
-            <h3>Categorías</h3>
-            <button id="btnCerrarSidebar" class="btn-cerrar"><i class="bi bi-x-lg"></i></button>
-        </div>
-        <nav>
-            <ul>
-                <li><a href="#">Computadoras</a></li>
-                <li><a href="#">Accesorios</a></li>
-                <li><a href="#">Celulares</a></li>
-                <li><a href="#">Electrodomésticos</a></li>
-                <li><a href="#">Ofertas especiales</a></li>
-            </ul>
-        </nav>
-    </aside>
 
     <div id="overlay" class="overlay oculto"></div>
 
     <main>
+        <div style="padding: 50px; text-align: center; color: #aaa;">
+            <h1>Bienvenido a Mak-PC</h1>
+            <p>Selecciona una categoría arriba para ver más.</p>
+        </div>
     </main>
+
+    <footer class="footer-principal">
+        <div class="footer-contenido">
+            <div class="footer-seccion">
+                <h4>Navegación</h4>
+                <a href="#">Ofertas</a>
+                <a href="#">Novedades</a>
+                <a href="#">Contacto</a>
+            </div>
+            <div class="footer-seccion">
+                <h4>Sobre Nosotros</h4>
+                <p>&copy; 2025 Mak-PC. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
 
     <script src="main.js"></script>
 </body>
