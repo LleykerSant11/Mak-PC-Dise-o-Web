@@ -1,28 +1,22 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Maksito</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 </head>
 
 <body>
     <header class="contenedor-principal">
 
         <div class="navegacion-principal">
-
             <div class="logo">
-                <img src="/recursos/MakPc_logo_n (1).png" alt="" width="40">
-                <span class="logo-text">Mak PC</span>
+                <img src="/recursos/MakPc_logo_n (1).png" alt="Logo" width="40">
+                <span class="logo-text">Mak-PC</span>
             </div>
-
-            <button class="btn-categorias" id="btnCategorias" aria-controls="barraCategorias" aria-expanded="false">
-                <span class="icono-categoria"><i class="bi bi-list"></i></span>
-                <span class="btn-text">Categorías</span>
-            </button>
 
             <form class="formulario-busqueda">
                 <input type="search" class="entrada-busqueda" placeholder="¿Qué estás buscando?">
@@ -31,57 +25,61 @@
                 </button>
             </form>
 
-            <nav>
+            <nav class="nav-iconos">
                 <a href="#" class="navegacion usuario-link">
-                <span class="icono icono-grande"><i class="bi bi-cart"></i></span>
-                <span class="label"><br>Carrito</span>
+                    <span class="icono"><i class="bi bi-cart"></i></span>
+                    <span class="label">Carrito</span>
                 </a>
-
                 <a href="#" class="navegacion compras-link">
                     <span class="icono"><i class="bi bi-bag"></i></span>
-                    <span class="label"><br>compras</span>
+                    <span class="label">Compras</span>
                 </a>
-
                 <a href="login.html" class="navegacion usuario-link">
-                
                     <span class="icono"><i class="bi bi-person-circle"></i></span>
-                    <span class="label"><br> Hola,Josep</span>
+                    <span class="label">Inicia Sesión</span>
                 </a>
             </nav>
         </div>
 
-        <div class="barra-inferior">
-        </div>
+        <div class="contenedor-inferior">
+            <button class="btn-categorias" id="btnCategorias">
+                <i class="bi bi-list"></i>
+                <span>Categorías</span>
+            </button>
 
-        <div class="navegacion-secundaria">
-            <nav class="barra-navegacion-secundaria">
-                <div class="posicion-navSec">
-                <a class="" href="">Ofertas</a>
-                <a class="" href="">Novedades</a>
-                <a class="" href="">Contacto</a>
-                </div>
+            <nav class="navegacion-secundaria">
+                <a href="#">Ofertas</a>
+                <a href="#">Novedades</a>
+                <a href="#">Contacto</a>
             </nav>
+
+            <div style="width: 120px;"></div>
         </div>
 
     </header>
 
     <aside id="barraCategorias" class="barra-categorias oculto">
-    <nav aria-label="Categorías de productos">
-        <ul>
-        <li><a href="#">Computadoras</a></li>
-        <li><a href="#">Accesorios</a></li>
-        <li><a href="#">Celulares</a></li>
-        <li><a href="#">Electrodomésticos</a></li>
-        <li><a href="#">Ofertas especiales</a></li>
-    </ul>
-    </nav>
-</aside>
-<main>
+        <div class="sidebar-header">
+            <h3>Categorías</h3>
+            <button id="btnCerrarSidebar" class="btn-cerrar"><i class="bi bi-x-lg"></i></button>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#">Computadoras</a></li>
+                <li><a href="#">Accesorios</a></li>
+                <li><a href="#">Celulares</a></li>
+                <li><a href="#">Electrodomésticos</a></li>
+                <li><a href="#">Ofertas especiales</a></li>
+            </ul>
+        </nav>
+    </aside>
 
-</main>
+    <div id="overlay" class="overlay oculto"></div>
 
-<script src="index.js"></script>
-<script src="main.js"></script>
+    <main>
+    </main>
 
+    <script src="main.js"></script>
 </body>
+
 </html>
