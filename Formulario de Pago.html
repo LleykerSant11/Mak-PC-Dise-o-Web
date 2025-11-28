@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maksito</title>
+    <link rel="stylesheet" href="Formulario de Pago.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <meta charset="UTF-8" />
+</head>
+<body>
+    <h1>Pago seguro</h1>
+    <form id="payment-form" method="post" action="/pagar">
+    <!-- Información del cliente -->
+    <fieldset>
+        <legend>Información del cliente</legend>
+        <label for="name">Nombre completo</label>
+        <input id="name" name="name" type="text" autocomplete="name" required />
+        <label for="email">Correo electrónico</label>
+        <input id="email" name="email" type="email" autocomplete="email" required />
+        <label for="phone">Teléfono (opcional)</label>
+        <input id="phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" placeholder="+51 999 999 999" />
+    </fieldset>
+
+    <!-- Detalles del pago -->
+    <fieldset>
+        <legend>Detalles del pago</legend>
+        <label for="amount">Monto (PEN)</label>
+        <input id="amount" name="amount" type="number" min="1" step="0.01" inputmode="decimal" required />
+        <label for="description">Descripción</label>
+        <input id="description" name="description" type="text" placeholder="Servicio, producto, número de pedido" required />
+        <label for="method">Método de pago</label>
+        <select id="method" name="method" required>
+        <option value="" disabled selected>Selecciona una opción</option>
+        <option value="card">Tarjeta de crédito/débito</option>
+        <option value="yape">Yape/Plin</option>
+        <option value="transfer">Transferencia</option>
+    </select>
+    </fieldset>
+
+    <!-- Datos de tarjeta (mostrar solo si method = card) -->
+    <fieldset id="card-fields" style="display:none;">
+        <legend>Tarjeta</legend>
+        <label for="card-number">Número de tarjeta</label>
+        <input
+        id="card-number"
+        name="card_number"
+        type="text"
+        inputmode="numeric"
+        autocomplete="cc-number"
+        placeholder="1234 5678 9012 3456"
+        pattern="^(\d{4}\s?){4}$"
+        required
+        />
+        <span class="help">Formato: 16 dígitos (puedes usar espacios).</span>
+        <div class="row">
+        <div>
+            <label for="card-exp">Vencimiento (MM/AA)</label>
+            <input
+            id="card-exp"
+            name="card_exp"
+            type="text"
+            inputmode="numeric"
+            autocomplete="cc-exp"
+            placeholder="MM/AA"
+            pattern="^(0[1-9]|1[0-2])\/\d{2}$"
+            required
+            />
+        </div>
+        <div>
+            <label for="card-cvv">CVV</label>
+            <input
+            id="card-cvv"
+            name="card_cvv"
+            type="password"
+            inputmode="numeric"
+            autocomplete="cc-csc"
+            placeholder="123"
+            pattern="^\d{3,4}$"
+            required
+            />
+        </div>
+    </div>
+    <label for="card-name">Nombre en la tarjeta</label>
+    <input id="card-name" name="card_name" type="text" autocomplete="cc-name" required />
+    </fieldset>
+
+    <!-- Términos y confirmación -->
+    <div class="terms">
+        <input id="terms" name="terms" type="checkbox" required />
+        <label for="terms">Acepto los términos y condiciones</label>
+    </div>
+
+    <button type="submit" id="pay-btn" disabled>Pagar ahora</button>
+</form>
+
+<script>
+    const method = document.getElementById('method');
+    const cardFields = document.getElementById('card-fields');
+    const form = document.getElementById('payment-form');
+    const payBtn = document.getElementById('pay-btn');
+    const terms = document.getElementById('terms');
+
+    // Mostrar/ocultar campos de tarjeta según método
+    method.addEventListener('change', () => {
+        const isCard = method.value === 'card';
+        cardFields.style.display = isCard ? 'block' : 'none';
+
+      // Alternar 'required' en campos de tarjeta
+    cardFields.querySelectorAll('input').forEach(i => {
+        i.required = isCard;
+    });
+    });
+
+    // Habilitar botón solo si términos están aceptados
+    terms.addEventListener('change', () => {
+        payBtn.disabled = !terms.checked;
+    });
+
+    // Validación básica antes de enviar (puedes reemplazar por integración real con pasarela)
+    form.addEventListener('submit', (e) => {
+      // Ejemplo: prevención si método es transferencia y falta descripción
+    const methodVal = method.value;
+    if (!methodVal) {
+        e.preventDefault();
+        alert('Selecciona un método de pago.');
+        return;
+    }
+      // Aquí normalmente enviarías a tu backend o tokenizarías la tarjeta con la pasarela
+      // e.g., Stripe/Culqi: crear token de tarjeta y enviar solo el token al servidor.
+    });
+    </script>
+</body>
+</html>

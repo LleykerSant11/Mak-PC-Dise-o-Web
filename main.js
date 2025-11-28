@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', () => {
+ document.addEventListener('DOMContentLoaded', () => {
     // Seleccionamos los elementos
     const botonesNav = document.querySelectorAll('.btn-nav');
     const paneles = document.querySelectorAll('.panel-info');

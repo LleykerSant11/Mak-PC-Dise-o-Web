@@ -267,3 +267,207 @@ main {
 .footer-seccion a:hover {
     color: white;
 }
+
+.banner-estatico {
+    width: 100%;
+    margin-top: 10px;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.banner-estatico img {
+    width: 100%;
+    height: auto;      /*mantiene proporciones reales, sin zoom */
+    display: block;
+    border-radius: 8px;
+    object-fit: contain; /*evita que se corte */
+}
+
+/* ===== INTRO COOL ===== */
+.intro-cool {
+    width: 100%; /* ocupa todo el ancho */
+    padding: 25px 10px; /* espacio interno arriba/abajo y lateral */
+    text-align: center; /* centra el texto */
+    color: #fff; /* color del texto */
+    background: linear-gradient(135deg, #0d1b3d, #1f2f55); /* degradado de fondo */
+    margin: 0; /* elimina espacio arriba y abajo */
+    border-radius: 0; /* sin bordes redondeados */
+}
+
+/* ===== MAIN ===== */
+main {
+    margin: 0; /* elimina márgenes por defecto */
+    padding: 0; /* elimina padding por defecto */
+}
+
+/* ===== CONTENEDOR DE PRODUCTOS ===== */
+.productos {
+    display: flex;
+    flex-wrap: wrap;          /* permite que bajen a otra fila */
+    gap: 20px;                /* espacio entre productos */
+    justify-content: center;
+    padding: 20px;
+    background-color: #f5f5f5;
+}
+
+/* ===== CADA PRODUCTO ===== */
+.producto {
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    width: 220px;
+    padding: 15px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.producto:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+/* Contenedor principal con banners laterales */
+.productos-con-banners {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* espacio entre banners y productos */
+    padding: 20px;
+    background-color: #0d1b3d; /* azul oscuro de fondo */
+}
+
+/* Banners laterales */
+.banner-lateral {
+    width: 160px; /* ancho del banner */
+    flex-shrink: 0; /* no se achique */
+}
+
+.banner-lateral img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    display: block;
+    border: 2px solid #0096FF; /* borde azul brillante */
+}
+
+/* Contenedor principal con banners laterales */
+.productos-con-banners {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* espacio entre banners y productos */
+    padding: 20px;
+    background-color: #0d1b3d; /* azul oscuro de fondo */
+}
+
+/* Banners laterales */
+.banner-lateral {
+    width: 160px; /* ancho del banner */
+    flex-shrink: 0; /* no se achique */
+}
+
+.banner-lateral img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    display: block;
+    border: 2px solid #0096FF; /* borde azul brillante */
+}
+
+/* Contenedor principal con banners laterales */
+.productos-con-banners {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* espacio entre banners y productos */
+    padding: 20px;
+    background-color: #0d1b3d; /* azul oscuro de fondo */
+}
+
+/* Banners laterales */
+.banner-lateral {
+    width: 160px; /* ancho del banner */
+    flex-shrink: 0; /* no se achique */
+}
+
+.banner-lateral img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    display: block;
+    border: 2px solid #0096FF; /* borde azul brillante */
+}
+
+/* Contenedor full width */
+.productos-fullwidth {
+    width: 100%;
+    padding: 20px;
+    background-color: #0d1b3d; /* azul oscuro de fondo */
+}
+
+/* Grid de productos: filas automáticas */
+.productos {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+/* Producto individual */
+.producto {
+    background-color: #005a9e; /* azul medio */
+    color: #fff;
+    border-radius: 12px;
+    padding: 15px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.producto:hover {
+    transform: translateY(-5px);
+    background-color: #0096FF; /* azul brillante al pasar el mouse */
+}
+
+/* Imagen del producto */
+.producto img {
+    width: 100%;
+    height: 180px;
+    object-fit: contain;
+    margin-bottom: 12px;
+}
+
+/* Nombre del producto */
+.producto h3 {
+    font-size: 1.1rem;
+    margin-bottom: 6px;
+    font-weight: 700;
+}
+
+/* Marca del producto */
+.producto .marca {
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+/* Precio */
+.producto .precio {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+}
+
+/* Botón */
+.producto button {
+    background-color: #00304E; /* azul oscuro */
+    color: white;
+    border: none;
+    padding: 10px 0;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    margin-top: auto;
+}
+
+.producto button:hover {
+    background-color: #001f3f; /* azul más intenso */
+}
